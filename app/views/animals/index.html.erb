@@ -1,0 +1,14 @@
+<br />
+<h1><center>Animal Sounds!</center></h1>
+<h2><center><%= link_to 'Add an Animal!', new_animal_path %></center></h2>
+<hr />
+
+<% @animals.each do |animal| %>
+    <ul>
+      <li>
+        <div>
+          <h3><%= "#{animal.name} goes #{animal.sound}!" %></h3>
+        </div>
+      </li>
+    </ul>
+  <% end %>

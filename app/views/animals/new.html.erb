@@ -1,0 +1,9 @@
+<h1>Enter Animal Details</h1>
+
+<%= simple_form_for @animal do |f| %>
+  <%= f.input :name %>
+  <%= f.input :sound %>
+  <%= f.submit 'Create', class: 'btn btn-primary' %>
+  <%= link_to 'Go Back', root_path, class: 'btn btn-info' %>
+<% end %>
+<br />
