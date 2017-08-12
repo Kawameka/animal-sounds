@@ -9,7 +9,10 @@ class AnimalsController < ApplicationController
   end
   
   def create
-    Animal.create(animal_params)
+    @animal = Animal.create(animal_params)
+    if @animal.invalid?
+      flash[:error] = 'Could not save this entry!'
+    end
     redirect_to root_path
   end
   
